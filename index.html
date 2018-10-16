@@ -17,6 +17,9 @@
     
         <h1>YEET</h1>
         <input id="getJacked" type="button" value= "get jacked">
+        <input id="steroids" type="button" value= "unethical jacking">
+        <input id="cursedJacking" type="button" value= "blackjack">
+        <input id="daddyReduce" type="button" value= "unjack me daddy">
         <p> 
 
         </p>
@@ -35,6 +38,55 @@
             jackHeight+= 20;
             var jackWidth = Number(widthProp.substring(0, widthProp.length -2 ));
             jackWidth += 20;
+            console.log(jackHeight);
+            console.log(jackWidth);
+        
+            document.getElementById('jack').style.height = jackHeight.toString() + "px";
+            document.getElementById('jack').style.width = jackWidth.toString() + "px";
+        }
+
+        document.getElementById("steroids").onclick = function () {
+            var elem = document.getElementById("jack");
+            var heightProp = window.getComputedStyle(elem, null).getPropertyValue("height");
+            var widthProp = window.getComputedStyle(elem, null).getPropertyValue("width");
+            // console.log(theCSSprop);
+            var jackHeight = Number(heightProp.substring(0,heightProp.length-2));
+            jackHeight+= 40;
+            var jackWidth = Number(widthProp.substring(0, widthProp.length -2 ));
+            jackWidth += 40;
+            console.log(jackHeight);
+            console.log(jackWidth);
+        
+            document.getElementById('jack').style.height = jackHeight.toString() + "px";
+            document.getElementById('jack').style.width = jackWidth.toString() + "px";
+        }
+
+        document.getElementById("cursedJacking").onclick = function () {
+            var elem = document.getElementById("jack");
+            var heightProp = window.getComputedStyle(elem, null).getPropertyValue("height");
+            var widthProp = window.getComputedStyle(elem, null).getPropertyValue("width");
+            // console.log(theCSSprop);
+            var jackHeight = Number(heightProp.substring(0,heightProp.length-2));
+            var chance = Math.random()
+            jackHeight+= chance > 0.1 ? 100 : -1500;
+            var jackWidth = Number(widthProp.substring(0, widthProp.length -2 ));
+            jackWidth += chance > 0.1 ? 100 : -1500;
+            console.log(jackHeight);
+            console.log(jackWidth);
+        
+            document.getElementById('jack').style.height = jackHeight.toString() + "px";
+            document.getElementById('jack').style.width = jackWidth.toString() + "px";
+        }
+
+        document.getElementById("daddyReduce").onclick = function () {
+            var elem = document.getElementById("jack");
+            var heightProp = window.getComputedStyle(elem, null).getPropertyValue("height");
+            var widthProp = window.getComputedStyle(elem, null).getPropertyValue("width");
+            // console.log(theCSSprop);
+            var jackHeight = Number(heightProp.substring(0,heightProp.length-2));
+            jackHeight-= 20;
+            var jackWidth = Number(widthProp.substring(0, widthProp.length -2 ));
+            jackWidth -= 20;
             console.log(jackHeight);
             console.log(jackWidth);
         
